@@ -1,17 +1,58 @@
 @import 'fonts';
 @import 'functions';
+@import 'mixins.scss';
 
 
 body {
     background-color: #333;
     margin: 0;
 
-    span {
+    p {
         font-family: Montserrat;
-        font-weight: 900;
+        font-weight: 400;
 
-        font-size: rem(50);
+        // font-size: calc(20px + (30 - 20) * ((100vw - 320px) / (1200 - 320)));
+        @include adaptive-value('font-size', 50, 14, 0);
+        @include adaptive-value('padding', 20, 5, 0);
+        @include adaptive-value('margin', 20, 10, 0);
+        line-height: 130%;
         color: green;
     }
 
+    main {
+        margin-top: 110px;
+        @include adaptive-hero('height', 900, 260);
+        background-image: url('@img/Rectangle 255.png');
+        background-position: 50% 50%;
+        background-size: cover;
+        background-repeat: no-repeat;
+        border: 1px solid;
+    }
+
+}
+
+
+@media screen and (max-width: 1200px) {
+    body {
+    
+        span {
+            display: block;
+            padding: calc(20px + (30 - 20) * ((100vw - 320px) / (1200 - 320)));
+            font-size: calc(20px + (30 - 20) * ((100vw - 320px) / (1200 - 320)));
+            margin: calc(10px + (20 - 10) * ((100vw - 320px) / (1200 - 320)));
+            border: calc(1px + (10 - 1) * ((100vw - 320px) / (1200 - 320))) solid;
+        }
+    
+    }
+}
+
+
+@media screen and (max-width: 480px) {
+
+    body {
+
+        main {
+            margin-top: 60px;
+        }
+    }
 }
