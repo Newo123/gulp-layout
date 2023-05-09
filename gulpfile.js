@@ -30,6 +30,8 @@ const watcher = () => {
     gulp.watch(path.watch.images, images); // gulp.series(images, ftp)
 }
 
+
+
 export { svgSprive }
 
 // Последовательная обработка шрифтов

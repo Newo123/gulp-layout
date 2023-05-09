@@ -1,1 +1,16 @@
-<header></header>
+<header>
+    <nav>
+        <!-- <a href="@@home">Главная</a>
+        <a href="@@marketing">Маркетинг</a>
+        <a href="@@service">Сервис</a>
+        <a href="@@about">О нас</a>
+        <a href="@@contacts">Контакты</a>
+        <a href="@@portfolio">Портфолио</a> -->
+
+        <ul>
+            @@for (var i = 0; i < arr.length; i++) {
+              <a href="`+link[i]+`">`+arr[i]+`</a>
+            }
+        </ul>
+    </nav>
+</header>
