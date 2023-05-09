@@ -1,4 +1,6 @@
 @import 'fonts';
+@import 'functions';
+
 
 body {
     background-color: #333;
@@ -7,21 +9,9 @@ body {
     span {
         font-family: Montserrat;
         font-weight: 900;
-        font-size: 50px;
+
+        font-size: rem(50);
         color: green;
     }
 
-}
-
-@media (max-width: 768px) {
-    span {
-        font-size: 20px;
-    }
-}
-
-
-@media (max-width: 768px) {
-    body {
-        background: green;
-    }
 }

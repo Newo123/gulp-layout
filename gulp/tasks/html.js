@@ -19,7 +19,11 @@ export const html = () => {
         .pipe(fileinclude({
             context: {
                 arr: ['Главная', 'Маркетинг', 'Сервис', 'О нас', 'Контакты', 'Портфолио'],
-                link: ['@@webRoot/index.html', '@@webRoot/krasnodar/marketing/marketing.html', '@@webRoot/krasnodar/service.html']
+                link: [
+                    '@@webRoot/index.html',
+                    '@@webRoot/krasnodar/marketing/marketing.html',
+                    '@@webRoot/krasnodar/service.html'
+                ]
             }
         }))
         .pipe(app.plugins.replace(/@img\//g, './img/'))
